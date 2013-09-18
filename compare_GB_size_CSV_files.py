@@ -1,42 +1,42 @@
-------------------------------------file01.txt---------------------------
-00650260048_c,,,The Pink Sheet
-05040390072,,,The Tan Sheet
-020108d4,,,Health News Daily
-02260160016_b,,,The Rose Sheet
-00630360023,relatedDocs,00630220023,The Pink Sheet
---------------------------------------------------------------------------
+#------------------------------------file01.txt---------------------------
+#00650260048_c,,,The Pink Sheet
+#05040390072,,,The Tan Sheet
+#020108d4,,,Health News Daily
+#02260160016_b,,,The Rose Sheet
+#00630360023,relatedDocs,00630220023,The Pink Sheet
+#--------------------------------------------------------------------------
+#
+#------------------------------------file02.txt----------------------------
+#000105d2,,,Health News Daily
+#00650260048_c,,,The Pink Sheet
+#000105d5,,,Health News Daily
+#05040390072,,,The Tan Sheet
+#000106d1,,,Health News Daily
+#000106d3,,,Health News Daily
+#000106d4,,,Health News Daily
+#000106d6,,,Health News Daily
+#--------------------------------------------------------------------------
+#
+#-------------------------both.txt----------------------------------------
+#00650260048_c
+#05040390072
+#020108d4
+#02260160016_b
+#00630360023
+#000105d2
+#00650260048_c
+#000105d5
+#05040390072
+#000106d1
+#000106d3
+#000106d4
+#000106d6
+#--------------------------------------------------------------------------
+#1.) Load file01.txt into a dictionary, with the key being id (the first value before the comma) and the value being the entire line of the file.  
+#2.) Load file02.txt into a dictionary, with the key being the id (the first value before the comma) and the value being the entire line of the file.
+#3.) For all of the ids in both.txt, determine which ids(keys) have different values between file01.txt and file02.txt.
 
-------------------------------------file02.txt----------------------------
-000105d2,,,Health News Daily
-00650260048_c,,,The Pink Sheet
-000105d5,,,Health News Daily
-05040390072,,,The Tan Sheet
-000106d1,,,Health News Daily
-000106d3,,,Health News Daily
-000106d4,,,Health News Daily
-000106d6,,,Health News Daily
---------------------------------------------------------------------------
-
--------------------------both.txt----------------------------------------
-00650260048_c
-05040390072
-020108d4
-02260160016_b
-00630360023
-000105d2
-00650260048_c
-000105d5
-05040390072
-000106d1
-000106d3
-000106d4
-000106d6
---------------------------------------------------------------------------
-1.) Load file01.txt into a dictionary, with the key being id (the first value before the comma) and the value being the entire line of the file.  
-2.) Load file02.txt into a dictionary, with the key being the id (the first value before the comma) and the value being the entire line of the file.
-3.) For all of the ids in both.txt, determine which ids(keys) have different values between file01.txt and file02.txt.
-
-----------------Solution 01----------------------------------------------------------
+#----------------Solution 01----------------------------------------------------------
 
 import csv, sys, os.path
  
