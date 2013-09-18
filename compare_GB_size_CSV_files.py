@@ -93,3 +93,35 @@ if __name__ == '__main__' or __name__ == 'main' :
     Usage();
 else :
   Usage( __name__ );
+  
+#----------------------------Solution02------------------------------------------
+import csv
+import sys
+ 
+f1 = open(sys.argv[1], 'rt')
+f2 = open(sys.argv[2], 'rt')
+f3 = open(sys.argv[3], 'rt')
+#f1 = csv.reader(open(sys.argv[1]),delimiter=',')
+h={}
+try:
+    reader1 = csv.reader(f1, delimiter=',')
+    reader2 = csv.reader(f2, delimiter=',')
+    reader3 = csv.reader(f3, delimiter=',')
+    for row1 in reader1:
+#       print row1[0]
+#       print ','.join(row1[1:])
+#       h[row1[0]]=','.join(row1[1:])
+#       print h
+            print row1[1:]
+#       if row1[0]!= "":
+            for row2 in reader2:
+#               if row2[0]!= "":
+                    if row2[0] in row1[0]:
+#                       if row2[1:] in row1[1:]:
+                           print row2[0]
+#           print row2[1:]
+ 
+finally:
+    f1.close()
+    f2.close()
+    f3.close()
